@@ -52,53 +52,79 @@
         </header>
         <main class="main">
             <div class="container">
-                <div class="card">
-                    
-                    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
-                        <div class="carousel-indicators">
-                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                        </div>
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <img src="img/Slider images/image1.jpg" class="d-block w-100" alt="image">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="img/Slider images/image2.jpg" class="d-block w-100" alt="image">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="img/Slider images/image3.jpg" class="d-block w-100" alt="image">
-                            </div>
-                        </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Previous</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Next</span>
-                        </button>
-                    </div>
 
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <div class="details-wrapper row">
-                            <div class="col-md-6 items counter-wrapper d-flex py-2">
-                                <button type="button" class="btn btn-danger items__control" data-action="minus">--</button>
-                                <div class="items__current px-2" data-counter>1</div>
-                                <button type="button" class="btn btn-primary items__control" data-action="plus">+</button>
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Launch demo modal
+                </button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
-                            <div class="col-md-6 price">
-                                <div class="price__weight">50x80x25</div>
-                                <div class="price__currency">1000 ₽</div>
+                            <div class="modal-body">
+                                <!--Описание-->
+                                <div class="card">
+                                    
+                                    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+                                        <div class="carousel-indicators">
+                                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                        </div>
+                                        <div class="carousel-inner">
+                                            <div class="carousel-item active">
+                                                <img src="img/Slider images/image1.jpg" class="d-block w-100" alt="image">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="img/Slider images/image2.jpg" class="d-block w-100" alt="image">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="img/Slider images/image3.jpg" class="d-block w-100" alt="image">
+                                            </div>
+                                        </div>
+                                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Previous</span>
+                                        </button>
+                                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Next</span>
+                                        </button>
+                                    </div>
+
+                                    <div class="card-body">
+                                        <h5 class="card-title">Card title</h5>
+                                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                        <div class="details-wrapper row">
+                                            <div class="col-md-6 items counter-wrapper d-flex py-2">
+                                                <button type="button" class="btn btn-danger items__control" data-action="minus">--</button>
+                                                <div class="items__current px-2" data-counter>1</div>
+                                                <button type="button" class="btn btn-primary items__control" data-action="plus">+</button>
+                                            </div>
+                                            <div class="col-md-6 price">
+                                                <div class="price__weight">50x80x25</div>
+                                                <div class="price__currency">1000 ₽</div>
+                                            </div>
+                                        </div>
+                                        <button data-cart type="button" class="btn btn-primary">+ в корзину</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--//Описание-->
+
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary">Save changes</button>
                             </div>
                         </div>
-                        <button data-cart type="button" class="btn btn-primary">+ в корзину</button>
                     </div>
                 </div>
-            </div>      
+
+                
         </main>
         <footer class="footer bg-light py-3">
             <div class="container">
