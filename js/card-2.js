@@ -6,7 +6,7 @@ const cartWrapper = document.querySelector('.cart-wrapper');
 
 window.addEventListener('click', function (event) {
 
-	//Проверяем что клик был совершен по кнопке "в корзинк"
+	//Проверяем что клик был совершен по кнопке "в корзине"
 	if (event.target.hasAttribute('data-cart')) {
 		//находим карточку кнопки и родителя кнопки в кликнутой карточке
 		const card = event.target.closest('.card');
@@ -41,9 +41,9 @@ window.addEventListener('click', function (event) {
                                                 <p class="card-text cart-item__weight">${productInfo.weight}</p>
                                                 <div class="cart-item__details">
                                                     <div class="items items--small counter-wrapper d-flex">
-                                                        <button class="btn btn-primary items__control" data-action="plus">+</button>
+                                                        <button class="btn btn-light items__control" data-action="minus">&#8211</button>                    
                                                         <div class="items__current px-2" data-counter="">${productInfo.counter}</div>
-                                                        <button class="btn btn-danger items__control" data-action="minus">--</button>
+                                                        <button class="btn btn-light items__control" data-action="plus">+</button>   
                                                     </div>
                                                     <div class="price">
                                                         <p class="card-text price__currency">${productInfo.price}</p>
@@ -56,11 +56,16 @@ window.addEventListener('click', function (event) {
 
             //отображаем товар в корзине
             cartWrapper.insertAdjacentHTML('beforeend', cartItemHTML);
-
         }
 
         //сбрасываем счётчик добавленного товара
         card.querySelector('[data-counter]').innerText = '1';	
+
+        //отображение статуса корзины(пустая/полная)
+        toggleBasketStatus();
+
+        //считаем общую стоимость товаров в крзине
+        calcCartPriceAndDelivery();
 
 	}
 })
