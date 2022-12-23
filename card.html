@@ -20,21 +20,23 @@
                     <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
                         <ul class="navbar-nav">
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="#about">Обо мне</a>
+                                <a class="nav-link active" aria-current="page" href="#">Обо мне</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#catalog">Кталог</a>
+                                <a class="nav-link" href="#">Кталог</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#mk">Мастер-класссы</a>
+                                <a class="nav-link" href="#">Мастер-класссы</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#contacts">Контакты</a>
+                                <a class="nav-link" href="#">Контакты</a>
                             </li>
                         </ul>
                         <ul class="navbar-nav">
                             <li class="nav-item">
-                                <a class="nav-link icon-bag-shopping"></a>
+                                <!--<a class="nav-link icon-bag-shopping"></a>-->
+                                <a class="nav-link icon-bag-shopping" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                </a>
                             </li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle icon-user" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"></a>
@@ -51,78 +53,117 @@
             </nav>
         </header>
         <main class="main">
-            <div class="container">
 
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Launch demo modal
-                </button>
-
-                <!-- Modal -->
-                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <!--Корзина-->
+            <section class="collapse basket" id="collapseExample">
+                <div class="container">
+                    <div class="card col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">Ваш заказ</h5>
+                            <div data-cart-empty class="alert alert-secondary" role="alert">
+                                Корзина пуста
                             </div>
-                            <div class="modal-body">
-                                <!--Описание-->
-                                <div class="card">
-                                    
-                                    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
-                                        <div class="carousel-indicators">
-                                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                            <div class="cart-wrapper">
+                                <!--<div class="card mb-3 cart-item" data-id="01">
+                                    <div class="row g-0 cart-item__top">
+                                        <div class="col-md-4 cart-item__img">
+                                            <img src="img/Slider images/image1.jpg" class="img-fluid rounded-start" alt="product-image">
                                         </div>
-                                        <div class="carousel-inner">
-                                            <div class="carousel-item active">
-                                                <img src="img/Slider images/image1.jpg" class="d-block w-100" alt="image">
-                                            </div>
-                                            <div class="carousel-item">
-                                                <img src="img/Slider images/image2.jpg" class="d-block w-100" alt="image">
-                                            </div>
-                                            <div class="carousel-item">
-                                                <img src="img/Slider images/image3.jpg" class="d-block w-100" alt="image">
+                                        <div class="col-md-8">
+                                            <div class="card-body cart-item__desc">
+                                                <h5 class="card-title cart-item__title">Корзина джутовая</h5>
+                                                <p class="card-text cart-item__weight">150x200x50</p>
+                                                <div class="cart-item__details">
+                                                    <div class="items items--small counter-wrapper d-flex">
+                                                        <button class="btn btn-light items__control" data-action="plus">+</button>
+                                                        <div class="items__current px-2" data-counter="">1</div>
+                                                        <button class="btn btn-light items__control" data-action="minus">--</button>
+                                                    </div>
+                                                    <div class="price">
+                                                        <p class="card-text price__currency">1500 ₽</p>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
-                                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                            <span class="visually-hidden">Previous</span>
-                                        </button>
-                                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                            <span class="visually-hidden">Next</span>
-                                        </button>
                                     </div>
-
-                                    <div class="card-body">
-                                        <h5 class="card-title">Card title</h5>
-                                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                        <div class="details-wrapper row">
-                                            <div class="col-md-6 items counter-wrapper d-flex py-2">
-                                                <button type="button" class="btn btn-danger items__control" data-action="minus">--</button>
-                                                <div class="items__current px-2" data-counter>1</div>
-                                                <button type="button" class="btn btn-primary items__control" data-action="plus">+</button>
-                                            </div>
-                                            <div class="col-md-6 price">
-                                                <div class="price__weight">50x80x25</div>
-                                                <div class="price__currency">1000 ₽</div>
-                                            </div>
-                                        </div>
-                                        <button data-cart type="button" class="btn btn-primary">+ в корзину</button>
-                                    </div>
+                                </div>-->
+                            </div>
+                            <div class="cart-total">
+                                <p data-cart-delivery class="d-none"><span class="h5">Доставка:</span> <span class="delivery-cost free">бесплатно</span> </p>
+                                <p><span class="h5">Итого:</span> <span class="total-price">0</span> <span class="rouble">₽</span></p>
+                                <p><span class="small">Бесплатно при заказе от 5000₽</span></p>
+                            </div>              
+                        </div>
+                        <div id="order-form" class="card-body border-top d-none">
+                            <h5 class="card-title">Оформить заказ</h5>
+                            <form>
+                                <div class="form-group">
+                                    <input type="tel" class="form-control" placeholder="Ваш номер телефона">
                                 </div>
-                            </div>
-                            <!--//Описание-->
-
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-primary">Save changes</button>
-                            </div>
+                                <button type="submit" class="btn btn-warning">Заказать</button>
+                            </form>
                         </div>
                     </div>
                 </div>
+            </section>
+                <!--//Корзина-->
+
+                <!--Описание товара-->
+            <section class="card-description">
+                <div class="container">
+                    <div class="card">
+                        
+                        <!--Слайдер-->
+                        <div class="slider-wrapper">                
+                        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                            </div>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="img/Slider images/image1.jpg" class="d-block w-100" alt="image">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="img/Slider images/image2.jpg" class="d-block w-100" alt="image">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="img/Slider images/image3.jpg" class="d-block w-100" alt="image">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                        <!--//Слайдер-->
+                        </div>
+
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <div class="details-wrapper row">
+                                <div class="col-md-6 items counter-wrapper d-flex py-2">
+                                    <button type="button" class="btn btn-light items__control" data-action="minus">&#8211</button>
+                                    <div class="items__current px-2" data-counter>1</div>
+                                    <button type="button" class="btn btn-light items__control" data-action="plus">+</button>
+                                </div>
+                                <div class="col-md-6 price">
+                                    <div class="price__weight">50x80x25</div>
+                                    <div class="price__currency">1000 ₽</div>
+                                </div>
+                            </div>
+                            <button data-cart type="button" class="btn btn-block btn-outline-warning">+ в корзину</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+                <!--//Описание товара-->
 
                 
         </main>
@@ -146,6 +187,5 @@
     </div>
 
     <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/counter.js"></script>
 </body>
 </html>

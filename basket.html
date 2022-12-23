@@ -20,21 +20,21 @@
                     <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
                         <ul class="navbar-nav">
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="#about">Обо мне</a>
+                                <a class="nav-link active" aria-current="page" href="#">Обо мне</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#catalog">Кталог</a>
+                                <a class="nav-link" href="#">Кталог</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#mk">Мастер-класссы</a>
+                                <a class="nav-link" href="#">Мастер-класссы</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#contacts">Контакты</a>
+                                <a class="nav-link" href="#">Контакты</a>
                             </li>
                         </ul>
                         <ul class="navbar-nav">
                             <li class="nav-item">
-                                <a class="nav-link icon-bag-shopping"></a>
+                                <a class="nav-link icon-bag-shopping" href="#"></a>
                             </li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle icon-user" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"></a>
@@ -51,102 +51,59 @@
             </nav>
         </header>
         <main class="main">
-            <div class="container">
-
-                <div class="card col-md-8">
-                    <div class="card-body">
-                        <h5 class="card-title">Ваш заказ</h5>
-                        <div data-cart-empty class="alert alert-secondary" role="alert">
-                            Корзина пуста
-                        </div>
-                        <div class="cart-wrapper">
-                            <div class="card mb-3 cart-item" data-id="01">
-                                <div class="row g-0 cart-item__top">
-                                    <div class="col-md-4 cart-item__img">
-                                        <img src="img/Slider images/image1.jpg" class="img-fluid rounded-start" alt="product-image">
-                                    </div>
-                                    <div class="col-md-8">
-                                        <div class="card-body cart-item__desc">
-                                            <h5 class="card-title cart-item__title">Корзина джутовая</h5>
-                                            <p class="card-text cart-item__weight">150x200x50</p>
-                                            <div class="cart-item__details">
-                                                <div class="items items--small counter-wrapper d-flex">
-                                                    <button class="btn btn-primary items__control" data-action="plus">+</button>
-                                                    <div class="items__current px-2" data-counter="">1</div>
-                                                    <button class="btn btn-danger items__control" data-action="minus">--</button>
-                                                </div>
-                                                <div class="price">
-                                                    <p class="card-text price__currency">1500 ₽</p>
+            <!--Корзина-->
+            <section class="basket">
+                <div class="container">
+                    <div class="card col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">Ваш заказ</h5>
+                            <div data-cart-empty class="alert alert-secondary" role="alert">
+                                Корзина пуста
+                            </div>
+                            <div class="cart-wrapper">
+                                <!--<div class="card mb-3 cart-item" data-id="01">
+                                    <div class="row g-0 cart-item__top">
+                                        <div class="col-md-4 cart-item__img">
+                                            <img src="img/Slider images/image1.jpg" class="img-fluid rounded-start" alt="product-image">
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="card-body cart-item__desc">
+                                                <h5 class="card-title cart-item__title">Корзина джутовая</h5>
+                                                <p class="card-text cart-item__weight">150x200x50</p>
+                                                <div class="cart-item__details">
+                                                    <div class="items items--small counter-wrapper d-flex">
+                                                        <button class="btn btn-light items__control" data-action="plus">+</button>
+                                                        <div class="items__current px-2" data-counter="">1</div>
+                                                        <button class="btn btn-light items__control" data-action="minus">--</button>
+                                                    </div>
+                                                    <div class="price">
+                                                        <p class="card-text price__currency">1500 ₽</p>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </div>-->
                             </div>
+                            <div class="cart-total">
+                                <p data-cart-delivery class="d-none"><span class="h5">Доставка:</span> <span class="delivery-cost free">бесплатно</span> </p>
+                                <p><span class="h5">Итого:</span> <span class="total-price">0</span> <span class="rouble">₽</span></p>
+                                <p><span class="small">Бесплатно при заказе от 5000₽</span></p>
+                            </div>              
                         </div>
-                        <div class="cart-total">
-                            <p><span class="h5">Доставка:</span> <span class="delivery-cost free">бесплатно</span> </p>
-                            <p><span class="h5">Итого:</span> <span class="total-price">500</span> <span class="rouble">₽</span></p>
-                        </div>              
-                    </div>
-                    <div id="order-form" class="card-body border-top">
-                        <h5 class="card-title">Оформить заказ</h5>
-                        <form>
-                            <div class="form-group">
-                                <input type="tel" class="form-control" placeholder="Ваш номер телефона">
-                            </div>
-                            <button type="submit" class="btn btn-primary">Заказать</button>
-                        </form>
+                        <div id="order-form" class="card-body border-top d-none">
+                            <h5 class="card-title">Оформить заказ</h5>
+                            <form>
+                                <div class="form-group">
+                                    <input type="tel" class="form-control" placeholder="Ваш номер телефона">
+                                </div>
+                                <button type="submit" class="btn btn-warning">Заказать</button>
+                            </form>
+                        </div>
                     </div>
                 </div>
-                                
-<!--
-                <div class="card mb-4">
-                    <div class="card-body">
-                        <h5 class="card-title">Ваш заказ</h4>
-                        <div data-cart-empty class="alert alert-secondary" role="alert">
-                            Корзина пуста
-                        </div>
-                        <div class="cart-wrapper">
-                            <div class="cart-item" data-id="02">
-                                <div class="cart-item__top">
-                                    <div class="cart-item__img">
-                                        <img src="img/roll/california-tempura.jpg" alt="">
-                                    </div>
-                                    <div class="cart-item__desc">
-                                        <div class="cart-item__title">Калифорния темпура</div>
-                                        <div class="cart-item__weight">6 шт. / 205г.</div>
-                                        <div class="cart-item__details">
-                                            <div class="items items--small counter-wrapper">
-                                                <div class="items__control" data-action="minus">-</div>
-                                                <div class="items__current" data-counter="">1</div>
-                                                <div class="items__control" data-action="plus">+</div>
-                                            </div>
-                                            <div class="price">
-                                                <div class="price__currency">250 ₽</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="cart-total">
-                            <p><span class="h5">Доставка:</span> <span class="delivery-cost free">бесплатно</span> </p>
-                            <p><span class="h5">Итого:</span> <span class="total-price">330</span> <span class="rouble">₽</span></p>
-                        </div>
-                    </div>
-                    <div id="order-form" class="card-body border-top">
-                        <h5 class="card-title">Оформить заказ</h4>
-                        <form>
-                            <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Ваш номер телефона">
-                            </div>
-                            <button type="submit" class="btn btn-primary">Заказать</button>
-                        </form>
-                    </div>
-                </div>-->
-                <!-- // Корзина -->
-            </div>      
+            </section>
+            <!--//Корзина-->      
         </main>
         <footer class="footer bg-light py-3">
             <div class="container">
