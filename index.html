@@ -38,7 +38,70 @@
                                 <a class="nav-link icon-bag-shopping" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
                                 </a>
                             </li>
-                            <li class="nav-item dropdown">
+                            <li class="nav-item">
+                                <a class="nav-link icon-user" href="#" role="button" data-bs-toggle="modal" data-bs-target="#exampleModal-user"></a>
+                            </li>
+
+                            <!--Модальное окно - страница пользователя-->
+                            <div class="modal fade" id="exampleModal-user" tabindex="-1" aria-labelledby="exampleModalLabel-user" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h1 class="modal-title fs-5" id="exampleModalLabel-user">Страница пользователя</h1>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <p class="card-text">Войдите в аккаунт или зарегестрируйтесь</p>
+
+                                            <!--Вкладки-->
+                                           <!--Табы-->
+                                           <nav class="mt-4">
+                                                <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                                                    <button class="nav-link active" id="nav-login-tab" data-bs-toggle="tab" data-bs-target="#nav-login" type="button" role="tab" aria-controls="nav-login" aria-selected="true">Войти</button>
+                                                    <button class="nav-link" id="nav-register-tab" data-bs-toggle="tab" data-bs-target="#nav-register" type="button" role="tab" aria-controls="nav-register" aria-selected="false">Зрегистрироваться</button>
+                                                </div>
+                                            </nav>
+                                            <!--Таб - контент-->
+                                            <div class="tab-content py-4" id="nav-tabContent">
+                                                <!--Блок - вход-->
+                                                <div class="tab-pane fade show active" id="nav-login" role="tabpanel" aria-labelledby="nav-login-tab" tabindex="0">
+                                                    <form>
+                                                        <div class="mb-3">
+                                                            <label for="exampleInputEmail1" class="form-label">Почта</label>
+                                                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                                        </div>
+                                                        <div class="mb-3">
+                                                            <label for="exampleInputPassword1" class="form-label">Пароль</label>
+                                                            <input type="password" class="form-control" id="exampleInputPassword1">
+                                                        </div>
+                                                        <button type="submit" class="btn btn-warning">Войти</button>
+                                                    </form>
+                                                </div>
+                                                <!--Блок - регистрация-->
+                                                <div class="tab-pane fade" id="nav-register" role="tabpanel" aria-labelledby="nav-register-tab" tabindex="0">
+                                                    <form>
+                                                        <div class="mb-3">
+                                                            <label for="exampleInputEmail1" class="form-label">Ваша почта</label>
+                                                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                                        </div>
+                                                        <div class="mb-3">
+                                                            <label for="exampleInputPassword1" class="form-label">Придумайте пароль</label>
+                                                            <input type="password" class="form-control" id="exampleInputPassword1">
+                                                        </div>
+                                                        <button type="submit" class="btn btn-warning">Зарегистрироваться</button>
+                                                        </form>
+                                                </div>
+                                            </div>
+                                           <!--//Вкладки-->
+
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <!--//Модальное окно - страница пользователя-->
+
+                            <!--<li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle icon-user" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"></a>
                                 <ul class="dropdown-menu">
                                     <li><a class="dropdown-item" href="#">Вход</a></li>
@@ -46,7 +109,7 @@
                                     <li><hr class="dropdown-divider"></li>
                                     <li><a class="dropdown-item" href="#">Регистрация</a></li>
                                 </ul>
-                            </li>
+                            </li>-->
                         </ul>
                     </div>
                 </div>                 
@@ -114,29 +177,30 @@
                         <h1 class="col-md-10">Добро пожаловать в мой магазин изделий ручной работы</h1>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque accusamus laboriosam odit, ex perspiciatis cum totam incidunt exercitationem voluptatum neque omnis. Nesciunt cum dolor eligendi fugiat ab doloribus praesentium minus.</p>
                     </div>
-                    <div id="carouselExampleDark" class="carousel carousel-light slide" data-bs-ride="carousel">
+                    <div class="carousel-wrapper d-flex justify-content-center">
+                    <div id="carouselExampleDark" class="carousel carousel-light slide col-md-8" data-bs-ride="carousel">
                         <div class="carousel-indicators">
                             <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                             <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
                             <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
                         </div>
                         <div class="carousel-inner">
-                            <div class="carousel-item active" data-bs-interval="10000">
-                                <img src="img/Slider images/image1.jpg" class="d-block w-100" alt="jute basket">
+                            <div class="carousel-item active" data-bs-interval="4000">
+                                <img src="img/Slider images/image1.jpg" class="carousel-img d-block w-100" alt="jute basket">
                                 <div class="carousel-caption d-none d-md-block">
                                     <h5>Джутовые корзины</h5>
                                     <p>Some representative placeholder content for the second slide.</p>
                                 </div>
                             </div>
-                            <div class="carousel-item" data-bs-interval="2000">
-                                <img src="img/Slider images/image2.jpg" class="d-block w-100" alt="makrame">
+                            <div class="carousel-item" data-bs-interval="4000">
+                                <img src="img/Slider images/image2.jpg" class="carousel-img d-block w-100" alt="makrame">
                                 <div class="carousel-caption d-none d-md-block">
                                     <h5>Изделия из макраме</h5>
                                     <p>Some representative placeholder content for the second slide.</p>
                                 </div>
                             </div>
-                            <div class="carousel-item">
-                                <img src="img/Slider images/image3.jpg" class="d-block w-100" alt="toys">
+                            <div class="carousel-item" data-bs-interval="4000">
+                                <img src="img/Slider images/image3.jpg" class="carousel-img d-block w-100" alt="toys">
                                 <div class="carousel-caption d-none d-md-block">
                                     <h5>Елочные игрушки</h5>
                                     <p>Some representative placeholder content for the third slide.</p>
@@ -151,6 +215,7 @@
                             <span class="carousel-control-next-icon" aria-hidden="true"></span>
                             <span class="visually-hidden">Next</span>
                         </button>
+                    </div>
                     </div>
                 </div>
             </section>
