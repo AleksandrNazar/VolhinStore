@@ -12,12 +12,16 @@ body {
 }
 
 /*-----------------------HEADER------------------------*/
-
-
-.dropdown-menu[data-bs-popper] {
-    left: -310%;
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: 700;
 }
 
+.nav-link {
+    font-weight: 700;
+}
+
+/*user modal window*/
 .modal-content {
     background-color: #fefae0;
 }
@@ -27,6 +31,7 @@ body {
         background-color: #d4a373;
         text-align: center;
         padding: 30px 0;
+        border-radius: 0.25rem;
     }
 }
 
@@ -63,7 +68,7 @@ body {
 
 @media(max-width: 991px) {
     .about {
-        min-height: 550px;
+        min-height: 650px;
     }
 
     .about__title {
@@ -113,6 +118,8 @@ body {
 
 .footer {
     margin-top: auto;
+    background-color: #fefae0;
+    border-top: 1px solid rgba(0,0,0,.125);
 }
 
 .social-link, .oferta-link {
