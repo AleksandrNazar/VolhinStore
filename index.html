@@ -4,14 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Volhin Store</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/my-icons-font.css">
 </head>
 <body>
     <div class="page-wrapper">
-        <header class="header">
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <header class="header position-absolute top-0 start-0 end-0">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
                 <div class="container">
                     <a class="navbar-brand" href="#">VolhinStore</a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -116,6 +119,62 @@
             </nav>
         </header>
         <main class="main">
+            
+
+            <!--Обо мне-->
+            <section class="about pt-5 d-flex align-items-center" id="about">
+                <div class="container">
+                    <div class="about-content text-center row justify-content-center">
+                        <h1 class="about__title col-md-10">Добро пожаловать в VolhinStore</h1>
+                        <p class="about__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque accusamus laboriosam odit, ex perspiciatis cum totam incidunt exercitationem voluptatum neque omnis. Nesciunt cum dolor eligendi fugiat ab doloribus praesentium minus.</p>
+                        <div class="about__button">
+                            <a class="btn btn-warning" href="#!">Подробнее</a>
+                        </div>
+                    </div>
+                    <!--<div class="carousel-wrapper d-flex justify-content-center">
+                    <div id="carouselExampleDark" class="carousel carousel-light slide col-md-8" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        </div>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active" data-bs-interval="4000">
+                                <img src="img/Slider images/image1.jpg" class="carousel-img d-block w-100" alt="jute basket">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>Джутовые корзины</h5>
+                                    <p>Some representative placeholder content for the second slide.</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item" data-bs-interval="4000">
+                                <img src="img/Slider images/image2.jpg" class="carousel-img d-block w-100" alt="makrame">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>Изделия из макраме</h5>
+                                    <p>Some representative placeholder content for the second slide.</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item" data-bs-interval="4000">
+                                <img src="img/Slider images/image3.jpg" class="carousel-img d-block w-100" alt="toys">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>Елочные игрушки</h5>
+                                    <p>Some representative placeholder content for the third slide.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                    </div>-->
+                </div>
+            </section>
+            <!--//Обо мне-->
+
             <!--Корзина-->
             <section class="collapse basket" id="collapseExample">
                 <div class="container">
@@ -169,57 +228,6 @@
                 </div>
             </section>
             <!--//Корзина-->
-
-            <!--Обо мне-->
-            <section class="about pt-5" id="about">
-                <div class="container">
-                    <div class="about-content text-center row justify-content-center ">
-                        <h1 class="col-md-10">Добро пожаловать в мой магазин изделий ручной работы</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque accusamus laboriosam odit, ex perspiciatis cum totam incidunt exercitationem voluptatum neque omnis. Nesciunt cum dolor eligendi fugiat ab doloribus praesentium minus.</p>
-                    </div>
-                    <div class="carousel-wrapper d-flex justify-content-center">
-                    <div id="carouselExampleDark" class="carousel carousel-light slide col-md-8" data-bs-ride="carousel">
-                        <div class="carousel-indicators">
-                            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                        </div>
-                        <div class="carousel-inner">
-                            <div class="carousel-item active" data-bs-interval="4000">
-                                <img src="img/Slider images/image1.jpg" class="carousel-img d-block w-100" alt="jute basket">
-                                <div class="carousel-caption d-none d-md-block">
-                                    <h5>Джутовые корзины</h5>
-                                    <p>Some representative placeholder content for the second slide.</p>
-                                </div>
-                            </div>
-                            <div class="carousel-item" data-bs-interval="4000">
-                                <img src="img/Slider images/image2.jpg" class="carousel-img d-block w-100" alt="makrame">
-                                <div class="carousel-caption d-none d-md-block">
-                                    <h5>Изделия из макраме</h5>
-                                    <p>Some representative placeholder content for the second slide.</p>
-                                </div>
-                            </div>
-                            <div class="carousel-item" data-bs-interval="4000">
-                                <img src="img/Slider images/image3.jpg" class="carousel-img d-block w-100" alt="toys">
-                                <div class="carousel-caption d-none d-md-block">
-                                    <h5>Елочные игрушки</h5>
-                                    <p>Some representative placeholder content for the third slide.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Previous</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Next</span>
-                        </button>
-                    </div>
-                    </div>
-                </div>
-            </section>
-            <!--//Обо мне-->
 
             <!--Каталог-->
             <section class="catalog pt-3" id="catalog">
