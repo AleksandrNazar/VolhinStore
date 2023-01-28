@@ -12,6 +12,35 @@ body {
 }
 
 /*-----------------------HEADER------------------------*/
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+}
+
+.header--fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #d4a373;
+    animation-name: header-fix;
+    animation-duration: 1s;
+}
+
+@keyframes header-fix {
+    0% {
+        opacity: 0;
+        top: -100px;
+    }
+
+    100% {
+        opacity: 1;
+        top: 0;
+    }
+}
+
 .navbar-brand {
     font-size: 1.5rem;
     font-weight: 700;
@@ -42,8 +71,10 @@ body {
     width: 100%;
     height: 100vh;
     min-height: 820px;
-
-    background: url('../img/vs-bg2.jpg');
+/*rgba(88, 47, 14, 0.5)    
+rgba(254, 250, 224, 1)*/
+    background: linear-gradient(to bottom, rgba(37, 9, 2, 0.7), rgba(37, 9, 2, 0.4)), 
+     url('../img/vs-bg2.jpg');
     background-position: center;
     background-repeat: no-repeat;
     -webkit-background-size: cover;
@@ -112,6 +143,10 @@ body {
 
 .carousel-img {
     max-height: 450px;
+}
+
+.modal-dialog {
+    max-width: 900px;
 }
 
 /*-----------------------FOOTER------------------------*/
