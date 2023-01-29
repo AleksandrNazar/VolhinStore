@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="css/my-icons-font.css">
 </head>
 <body>
-    <div class="page-wrapper">
+    <div class="page-wrapper d-flex flex-column justify-content-between min-vh-100 overflow-hidden">
         <header class="header">
             <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
                 <div class="container">
@@ -44,72 +44,72 @@
                             <li class="nav-item">
                                 <a class="nav-link icon-user" href="#" role="button" data-bs-toggle="modal" data-bs-target="#exampleModal-user"></a>
                             </li>
-
-                            <!--Модальное окно - страница пользователя-->
-                            <div class="modal fade" id="exampleModal-user" tabindex="-1" aria-labelledby="exampleModalLabel-user" aria-hidden="true">
-                                <div class="modal-dialog">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h1 class="modal-title fs-5" id="exampleModalLabel-user">Страница пользователя</h1>
-                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                        </div>
-                                        <div class="modal-body">
-                                            <p class="card-text">Войдите в аккаунт или зарегестрируйтесь</p>
-
-                                            <!--Вкладки-->
-                                           <!--Табы-->
-                                           <nav class="mt-4">
-                                                <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                                                    <button class="nav-link active" id="nav-login-tab" data-bs-toggle="tab" data-bs-target="#nav-login" type="button" role="tab" aria-controls="nav-login" aria-selected="true">Войти</button>
-                                                    <button class="nav-link" id="nav-register-tab" data-bs-toggle="tab" data-bs-target="#nav-register" type="button" role="tab" aria-controls="nav-register" aria-selected="false">Зрегистрироваться</button>
-                                                </div>
-                                            </nav>
-                                            <!--Таб - контент-->
-                                            <div class="tab-content py-4" id="nav-tabContent">
-                                                <!--Блок - вход-->
-                                                <div class="tab-pane fade show active" id="nav-login" role="tabpanel" aria-labelledby="nav-login-tab" tabindex="0">
-                                                    <form>
-                                                        <div class="mb-3">
-                                                            <label for="exampleInputEmail1" class="form-label">Почта</label>
-                                                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                                                        </div>
-                                                        <div class="mb-3">
-                                                            <label for="exampleInputPassword1" class="form-label">Пароль</label>
-                                                            <input type="password" class="form-control" id="exampleInputPassword1">
-                                                        </div>
-                                                        <button type="submit" class="btn btn-warning">Войти</button>
-                                                    </form>
-                                                </div>
-                                                <!--Блок - регистрация-->
-                                                <div class="tab-pane fade" id="nav-register" role="tabpanel" aria-labelledby="nav-register-tab" tabindex="0">
-                                                    <form>
-                                                        <div class="mb-3">
-                                                            <label for="exampleInputEmail1" class="form-label">Ваша почта</label>
-                                                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                                                        </div>
-                                                        <div class="mb-3">
-                                                            <label for="exampleInputPassword1" class="form-label">Придумайте пароль</label>
-                                                            <input type="password" class="form-control" id="exampleInputPassword1">
-                                                        </div>
-                                                        <button type="submit" class="btn btn-warning">Зарегистрироваться</button>
-                                                        </form>
-                                                </div>
-                                            </div>
-                                           <!--//Вкладки-->
-
-                                        </div>
-                                        
-                                    </div>
-                                </div>
-                            </div>
-                            <!--//Модальное окно - страница пользователя-->
                         </ul>
                     </div>
                 </div>                 
             </nav>
         </header>
+
+        <!--Модальное окно - страница пользователя-->
+        <div class="modal fade" id="exampleModal-user" tabindex="-1" aria-labelledby="exampleModalLabel-user" aria-hidden="true">
+            <div class="container">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h2 class="modal-title fs-5" id="exampleModalLabel-user">Страница пользователя</h2>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p class="card-text">Войдите в аккаунт или зарегестрируйтесь</p>
+
+                            <!--Вкладки-->
+                            <!--Табы-->
+                            <nav class="mt-4">
+                                <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                                    <button class="nav-link active" id="nav-login-tab" data-bs-toggle="tab" data-bs-target="#nav-login" type="button" role="tab" aria-controls="nav-login" aria-selected="true">Войти</button>
+                                    <button class="nav-link" id="nav-register-tab" data-bs-toggle="tab" data-bs-target="#nav-register" type="button" role="tab" aria-controls="nav-register" aria-selected="false">Зрегистрироваться</button>
+                                </div>
+                            </nav>
+                            <!--Таб - контент-->
+                            <div class="tab-content py-4" id="nav-tabContent">
+                                <!--Блок - вход-->
+                                <div class="tab-pane fade show active" id="nav-login" role="tabpanel" aria-labelledby="nav-login-tab" tabindex="0">
+                                    <form>
+                                        <div class="mb-3">
+                                            <label for="exampleInputEmail1" class="form-label">Почта</label>
+                                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="exampleInputPassword1" class="form-label">Пароль</label>
+                                            <input type="password" class="form-control" id="exampleInputPassword1">
+                                        </div>
+                                        <button type="submit" class="btn btn-warning">Войти</button>
+                                    </form>
+                                </div>
+                                <!--Блок - регистрация-->
+                                <div class="tab-pane fade" id="nav-register" role="tabpanel" aria-labelledby="nav-register-tab" tabindex="0">
+                                    <form>
+                                        <div class="mb-3">
+                                            <label for="exampleInputEmail1" class="form-label">Ваша почта</label>
+                                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="exampleInputPassword1" class="form-label">Придумайте пароль</label>
+                                            <input type="password" class="form-control" id="exampleInputPassword1">
+                                        </div>
+                                        <button type="submit" class="btn btn-warning">Зарегистрироваться</button>
+                                    </form>
+                                </div>
+                            </div>
+                            <!--//Вкладки-->
+                        </div>                       
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--//Модальное окно - страница пользователя-->
+
         <main class="main">
-            
 
             <!--Обо мне-->
             <section class="about d-flex align-items-center py-5" id="about">
@@ -118,7 +118,7 @@
                         <h1 class="about__title col-md-10">Добро пожаловать в VolhinStore</h1>
                         <p class="about__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque accusamus laboriosam odit, ex perspiciatis cum totam incidunt exercitationem voluptatum neque omnis. Nesciunt cum dolor eligendi fugiat ab doloribus praesentium minus.</p>
                         <div class="about__button mt-4">
-                            <a class="btn btn-warning btn-lg" href="#catalog">подробнее</a>
+                            <a class="btn btn-warning btn-lg" href="#gallery">подробнее</a>
                         </div>
                     </div>
                 </div>
@@ -622,11 +622,11 @@
                                             </div>
 
                                             <!--Модальное окно - 7 кнопка-->
-                                            <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#exampleModal-7">
+                                            <button type="button" class="btn btn-warning mt-2" data-bs-toggle="modal" data-bs-target="#exampleModal-7">
                                             Подробнее
                                             </button>
                                             <!--<a href="#" class="btn btn-warning">Go somewhere</a>-->
-                                            <button data-cart type="button" class="btn btn-block btn-outline-warning">+ в корзину</button>
+                                            <button data-cart type="button" class="btn btn-block btn-outline-warning mt-2">+ в корзину</button>
                                         </div>
                                     </div>
                                 </div>
@@ -699,11 +699,11 @@
                                             </div>
 
                                             <!--Модальное окно - 8 кнопка-->
-                                            <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#exampleModal-8">
+                                            <button type="button" class="btn btn-warning mt-2" data-bs-toggle="modal" data-bs-target="#exampleModal-8">
                                             Подробнее
                                             </button>
                                             <!--<a href="#" class="btn btn-warning">Go somewhere</a>-->
-                                            <button data-cart type="button" class="btn btn-block btn-outline-warning">+ в корзину</button>
+                                            <button data-cart type="button" class="btn btn-block btn-outline-warning mt-2">+ в корзину</button>
                                         </div>
                                     </div>
                                 </div>
@@ -754,6 +754,99 @@
                 </div>
             </section>
             <!--//Мастер-классы-->
+
+            <!--Галлерея-->
+            <section class="gallery" id="gallery">
+                <div class="container">
+                   <div class="catalog-title row text-center justify-content-center py-5">
+                        <h2 class="col-md-10 p-4">Мои работы</h2>
+                    </div> 
+                </div>
+                <div class="container-fluid">
+                    <div class="gallery__block row row-cols-4">
+                        <div class="gallery__img col p-0">
+                            <a href="#!" class="gallery__img-link d-block" data-bs-toggle="modal" data-bs-target="#exampleModal-gallery">
+                                <img class="d-block w-100 h-auto" src="img/gallery/photo1.jpg" alt="photo">
+                            </a>
+                        </div>
+                        <div class="gallery__img col p-0">
+                            <a href="#!" class="gallery__img-link d-block" data-bs-toggle="modal" data-bs-target="#exampleModal-gallery">
+                                <img class="d-block w-100 h-auto" src="img/gallery/photo1.jpg" alt="photo">
+                            </a>
+                        </div>
+                        <div class="gallery__img col p-0">
+                            <a href="#!" class="gallery__img-link d-block" data-bs-toggle="modal" data-bs-target="#exampleModal-gallery">
+                                <img class="d-block w-100 h-auto" src="img/gallery/photo1.jpg" alt="photo">
+                            </a>
+                        </div>
+                        <div class="gallery__img col p-0">
+                            <a href="#!" class="gallery__img-link d-block" data-bs-toggle="modal" data-bs-target="#exampleModal-gallery">
+                                <img class="d-block w-100 h-auto" src="img/gallery/photo1.jpg" alt="photo">
+                            </a>
+                        </div>
+                        <div class="gallery__img col p-0">
+                            <a href="#!" class="gallery__img-link d-block" data-bs-toggle="modal" data-bs-target="#exampleModal-gallery">
+                                <img class="d-block w-100 h-auto" src="img/gallery/photo1.jpg" alt="photo">
+                            </a>
+                        </div>
+                        <div class="gallery__img col p-0">
+                            <a href="#!" class="gallery__img-link d-block" data-bs-toggle="modal" data-bs-target="#exampleModal-gallery">
+                                <img class="d-block w-100 h-auto" src="img/gallery/photo1.jpg" alt="photo">
+                            </a>
+                        </div>
+                        <div class="gallery__img col p-0">
+                            <a href="#!" class="gallery__img-link d-block" data-bs-toggle="modal" data-bs-target="#exampleModal-gallery">
+                                <img class="d-block w-100 h-auto" src="img/gallery/photo1.jpg" alt="photo">
+                            </a>
+                        </div>
+                        <div class="gallery__img col p-0">
+                            <a href="#!" class="gallery__img-link d-block" data-bs-toggle="modal" data-bs-target="#exampleModal-gallery">
+                                <img class="d-block w-100 h-auto" src="img/gallery/photo1.jpg" alt="photo">
+                            </a>
+                        </div>    
+                    </div>
+
+                    <!--Модальное окно галлереи-->
+                    <div class="modal fade" id="exampleModal-gallery" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="container">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                    <!--Слайдер галлереи-->
+                                        <div id="carouselExampleControls-gallery" class="carousel slide" data-bs-ride="carousel">
+                                            <div class="carousel-inner">
+                                                <div class="carousel-item active">
+                                                    <img src="img/Slider images/image1.jpg" class="d-block w-100" alt="...">
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <img src="img/Slider images/image2.jpg" class="d-block w-100" alt="...">
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <img src="img/Slider images/image3.jpg" class="d-block w-100" alt="...">
+                                                </div>
+                                            </div>
+                                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls-gallery" data-bs-slide="prev">
+                                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                                <span class="visually-hidden">Previous</span>
+                                            </button>
+                                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls-gallery" data-bs-slide="next">
+                                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                                <span class="visually-hidden">Next</span>
+                                            </button>
+                                        </div>
+                                    <!--//Слайдер галлереи-->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                   
+                    <!--//Модальное окно галлереи-->
+                </div>
+            </section>
+            <!--//Галлерея-->
 
             <!--Контакты-->
             <section class="contacts py-5" id="contacts">
@@ -812,7 +905,7 @@
                             <div id="order-form" class="card-body border-top d-none">
                                 <h5 class="card-title">Оформить заказ</h5>
                                 <form>
-                                    <div class="form-group">
+                                    <div class="form-group mb-3">
                                         <input type="tel" class="form-control" placeholder="Ваш номер телефона">
                                     </div>
                                     <button type="submit" class="btn btn-warning">Заказать</button>
@@ -824,7 +917,7 @@
             </section>
             <!--//Корзина-->      
         </main>
-        <footer class="footer py-3">
+        <footer class="footer mt-auto py-3">
             <div class="container">
                 <div class="footer-content row">
                     <div class="social d-flex justify-content-center col-md-4">
