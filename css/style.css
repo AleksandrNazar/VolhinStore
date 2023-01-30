@@ -85,6 +85,30 @@ body {
 .card {
 /*    border: none;*/
  background-color: #fefae0;
+ position: relative;
+ transition: transform 0.2s linear;
+}
+
+.card:hover {
+    transform: translate3d(-2px, -2px, 0px);
+}
+
+.card-img {
+    transition: opacity 0.2s linear;
+}
+
+.card-img:hover {
+    opacity: 0.5;
+}
+
+.gallery__img-link {
+    position: relative;
+    transition: opacity 0.2s linear, transform 0.2s linear;
+}
+
+.gallery__img-link:hover {
+    opacity: 0.5;
+    transform: translate3d(-2px, -2px, 0px);
 }
 
 .free {
