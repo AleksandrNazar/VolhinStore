@@ -82,6 +82,10 @@ body {
     max-width: 250px;
 }
 
+.me__text {
+    font-size: 20px;
+}
+
 .card {
 /*    border: none;*/
  background-color: #fefae0;
@@ -176,9 +180,13 @@ body {
     .about__text {
         font-size: 20px;
     }
+
+    .me__text {
+        font-size: 1rem;
+    }
 }
 
-@media(max-width: 576px) {
+@media(max-width: 575px) {
     .about__title {
         font-size: 35px;
     }
@@ -189,5 +197,10 @@ body {
 
     .nav-tabs .nav-link {
         font-size: 12px;
+    }
+
+    .col {
+        max-width: 400px;
+        margin: var(--bs-gutter-y) auto 0 auto;
     }
 }
